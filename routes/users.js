@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');
   connection.query('SELECT * from users', function (error, results, fields) {
 		if (error) throw error;
-		res.send(JSON.stringify({'data':results}));
+		res.send(JSON.stringify({ 'data' : results }));
   });
 });
 
